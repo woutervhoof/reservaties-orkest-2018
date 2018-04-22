@@ -1,324 +1,330 @@
 <html>
-	<head>
-		<title>SrcOrkest - tickets</title>
-		<link rel="shortcut icon" href="6.png" type="image/png">
-		<!-- Materialize CSS -->
-		<!-- <link rel="stylesheet" media="all" href="style.css" /> -->
-		<link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+   <head>
+      <title>SrcOrkest - tickets</title>
+      <link rel="shortcut icon" href="6.png" type="image/png">
+      <!-- Materialize CSS -->
+      <!-- <link rel="stylesheet" media="all" href="style.css" /> -->
+      <link rel="stylesheet" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-		<!-- Latest compiled JavaScript -->
+      <!-- Latest compiled JavaScript -->
 
-		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"  >
+      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css"  >
 
-		<!-- Compiled and minified CSS -->
-		<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css" />
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.min.css" />
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+      <link rel="stylesheet" href="https://rawgit.com/alvarotrigo/fullPage.js/master/dist/jquery.fullpage.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
-  	 <!-- Compiled and minified JavaScript -->
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-		<script src="https://rawgit.com/alvarotrigo/fullPage.js/master/jquery.fullPage.min.js" ></script>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<script>
-		$(document).ready(function() {
-	    $('#fullpage').fullpage({
-	        anchors:['firstPage', 'secondPage']
-	    });
-		});
-		</script>
-</head>
-<style>
-.footer{
-	text-align: center;
-	font-size: 25px;
-	font-weight: 100;
-  font-family: 'Oswald', sans-serif;
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+      <script src="https://rawgit.com/alvarotrigo/fullPage.js/master/dist/jquery.fullpage.js" ></script>
+      <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script>
+      $(document).ready(function() {
+         $('#fullpage').fullpage({
+            anchors:['firstPage', 'secondPage']
+         });
 
-}
+         // Hack voor alles goed te alignen
+         // Er is ergens een probleem in fullpage library
+         // waarschijnlijk een conflict met de CSS van deze pagina
+         // Moet nog eens bekeken worden
+         $(window).trigger('resize');
+      });
+      </script>
+   </head>
+   <style>
+      .footer{
+         text-align: center;
+         font-size: 25px;
+         font-weight: 100;
+         font-family: 'Oswald', sans-serif;
 
-h1{
-	text-align: center;
-	color: white !important;
-	padding-top: 12%;
-	font-family: 'Oswald', sans-serif !important	;
-	font-size: 4.2rem;
+      }
 
-
-}
-
-.formulier{
-}
-.submit{
-	border: 2px solid;
-	border-color: white;
-	color: white;
-	border-radius: 25px;
-	width: 100px;
-	height: 35px;
-	background-color: transparent;
-	-webkit-transition: all 0.5s; /* Safari */
-transition: all 0.5s;
-}
-
-.submit:hover{
-	border-color: #26A69A;
-	-webkit-transition: all 0.5s; /* Safari */
-transition: all 0.5s;
-}
-.checkbox{
-	color: white;
-	font-size:20px;
-}
-.footerlinks{
-	position: relative;
-	top: 100px;
-	left: 10px;
-}
-.footerlinks p{
-	font-family: 'Amatic SC', cursive;
-	font-size: 15px;
-	color: white;
-	text-align: left;
+      h1{
+         text-align: center;
+         color: white !important;
+         padding-top: 12%;
+         font-family: 'Oswald', sans-serif !important	;
+         font-size: 4.2rem;
 
 
-}
-.footerrechts{
-	position: relative;
-	top: 60px;
-	right: 10px;
-}
-.footerrechts p{
-	font-family: 'Amatic SC', cursive !important;
-	font-size: 15px;
-	color: white;
-	text-align: right;
-}
-body {
-	color: white;
-	background-attachment: fixed;
-  font-family: 'Oswald', sans-serif !important	;
-}
-.first{
-	background-image: url("4.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 110%;
-	background-position: 50% 150;
-	background-color: black;
+      }
 
-}
+      .formulier{
+      }
+      .submit{
+         border: 2px solid;
+         border-color: white;
+         color: white;
+         border-radius: 25px;
+         width: 100px;
+         height: 35px;
+         background-color: transparent;
+         -webkit-transition: all 0.5s; /* Safari */
+         transition: all 0.5s;
+      }
 
-.second{
-	background-color: #BE0000;
-	text-align: center;
-	color: white;
+      .submit:hover{
+         border-color: #26A69A;
+         -webkit-transition: all 0.5s; /* Safari */
+         transition: all 0.5s;
+      }
+      .checkbox{
+         color: white;
+         font-size:20px;
+      }
+      .footerlinks{
+         position: relative;
+         top: 100px;
+         left: 10px;
+      }
+      .footerlinks p{
+         font-family: 'Amatic SC', cursive;
+         font-size: 15px;
+         color: white;
+         text-align: left;
 
-}
-.second form{
-	width: 80%;
-	max-width: 800px;
-	text-align: left;
-	color: white;
-	margin: auto;
-}
-.input-field{
-	color: white !important;
-}
-.tekentje{
-	text-align: center;
-	position: relative;
-	top: 200px;
-	font-size: 40px;
-}
-#register{
-	text-decoration: none;
-	color: white;
-}
-.tekstje{
-	position: relative;
-	/* top: 55px; */
-}
-.fa{
-	font-size: 60px;
-	color: #BE0000;
-	position: relative;
-bottom: -280px;
-left: 46%;
-}
-input.submit:hover{
-  color: #BE0000 !important;
-	border-color: white !important;
-	background-color: white;
-}
-.fa:hover{
-	color: lightgrey;
-}
-.slide-in-end{
-	opacity: 1;
-	margin-top: 0px;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
-}
-.slide-in-begin{
-	opacity: 0;
-	margin-top: 50px;
-}
 
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #79706F inset !important;
-    -webkit-text-fill-color: white !important;
+      }
+      .footerrechts{
+         position: relative;
+         top: 60px;
+         right: 10px;
+      }
+      .footerrechts p{
+         font-family: 'Amatic SC', cursive !important;
+         font-size: 15px;
+         color: white;
+         text-align: right;
+      }
+      body {
+         color: white;
+         background-attachment: fixed;
+         font-family: 'Oswald', sans-serif !important	;
+      }
+      .first{
+         background-image: url("4.jpg");
+         background-repeat: no-repeat;
+         background-size: cover;
+         height: 110%;
+         background-position: 50% 150;
+         background-color: black;
 
-}
-.link:hover{
-  font-size:13px;
-  color:#26A69A!important;
-}
-.second:before{
-            content: '';
-            width: 100%;
-            height: 50px;
-            display: block;
-            /*
-               Kleur kan gewijzigd worden door het style attribuut "fill" aan te passen in de SVG code
-            */
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:#BE0000' /%3E%3C/svg%3E");
-            /*
-               Uitleg zie hierboven.
-            */
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            /*
-               Driehoek met hoogte van driehoek naar boven schuiven
-            */
-            margin-top: -65px;
+      }
 
+      .second{
+         background-color: #BE0000;
+         text-align: center;
+         color: white;
+
+      }
+      .second form{
+         width: 80%;
+         max-width: 800px;
+         text-align: left;
+         color: white;
+         margin: auto;
+      }
+      .input-field{
+         color: white !important;
+      }
+      .tekentje{
+         text-align: center;
+         position: relative;
+         top: 200px;
+         font-size: 40px;
+      }
+      #register{
+         text-decoration: none;
+         color: white;
+      }
+      .tekstje{
+         position: relative;
+         /* top: 55px; */
+      }
+      .fa{
+         font-size: 60px;
+         color: #BE0000;
+         position: relative;
+         bottom: -280px;
+         left: 46%;
+      }
+      input.submit:hover{
+         color: #BE0000 !important;
+         border-color: white !important;
+         background-color: white;
+      }
+      .fa:hover{
+         color: lightgrey;
+      }
+      .slide-in-end{
+         opacity: 1;
+         margin-top: 0px;
+         -webkit-transition: all 0.5s;
+         transition: all 0.5s;
+      }
+      .slide-in-begin{
+         opacity: 0;
+         margin-top: 50px;
+      }
+
+      input:-webkit-autofill {
+         -webkit-box-shadow: 0 0 0px 1000px #79706F inset !important;
+         -webkit-text-fill-color: white !important;
+
+      }
+      .link:hover{
+         font-size:13px;
+         color:#26A69A!important;
+      }
+      .second:before{
+         content: '';
+         width: 100%;
+         height: 50px;
+         display: block;
+         /*
+            Kleur kan gewijzigd worden door het style attribuut "fill" aan te passen in de SVG code
+         */
+         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:#BE0000' /%3E%3C/svg%3E");
+         /*
+            Uitleg zie hierboven.
+         */
+         background-size: 100% 100%;
+         background-repeat: no-repeat;
+         /*
+            Driehoek met hoogte van driehoek naar boven schuiven
+         */
+         margin-top: -65px;
+
+      }
+      input{
+         color:white !important;
+         border-color: white !important;
+      }
+      textarea{
+         color:white !important;
+         border-color: white !important;
+      }
+      label{
+         color: white !important;
+      }
+      mark{
+         background-color: #BE0000;
+         color: black;
+      }
+      h3{
+         font-family: 'Oswald', sans-serif !important	;
+      }
+      .w3-animate-bottom{
+         animation: animatebottom 1s;
+      }
+      .w3-animate-right{
+         animation: animateright 1s;
+      }
+      .slideanim {visibility:hidden;}
+      .slide {
+         /* The name of the animation */
+         animation-name: slide;
+         -webkit-animation-name: slide;
+         /* The duration of the animation */
+         animation-duration: 1s;
+         -webkit-animation-duration: 1s;
+         /* Make the element visible */
+         visibility: visible;
+      }
+
+      /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+      @keyframes slide {
+         0% {
+            opacity: 0;
+            transform: translateX(70%);
          }
-				 input{
-					 color:white !important;
-					 border-color: white !important;
-				 }
-				 textarea{
-					 color:white !important;
-					 border-color: white !important;
-				 }
-				 label{
-					 color: white !important;
-				 }
-				 mark{
-					 background-color: #BE0000;
-					 color: black;
-				 }
-h3{
-	font-family: 'Oswald', sans-serif !important	;
-}
-.w3-animate-bottom{
-	animation: animatebottom 1s;
-}
-.w3-animate-right{
-	animation: animateright 1s;
-}
-.slideanim {visibility:hidden;}
-.slide {
-    /* The name of the animation */
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    /* The duration of the animation */
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    /* Make the element visible */
-    visibility: visible;
-}
-
-/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
-@keyframes slide {
-    0% {
-        opacity: 0;
-        transform: translateX(70%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-@-webkit-keyframes slide {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateX(70%);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateX(0%);
-    }
-}
-</style>
-<body>
-		<div id="fullpage">
-			<div class="section active first" data-anchor="firstPage">
-					<h1 class="w3-animate-bottom"><mark>Online ticketverkoop SrcOrkest</mark></h1>
-					<br/>
-					<p style="font-size: 30px;color: black;" class="w3-animate-bottom"><a style="color: black;" id="register" href="#secondPage" ><br/>
-					<i class=" fa fa-angle-down " ></i></a>
-					</p>
-			</div>
-			<div class="section second" data-anchor="secondPage" >
-				<div class="tekstje slideanim">
-				<h3>Online ticketverkoop SrcOrkest</h3>
-        <p>Vul hieronder het formulier in om tickets te bestellen, wij leggen uw tickets opzij aan de kassa.</p>
-			</div>
-				<form action="/entry/new" method="POST" class="formulier slideanim" >
-          <div class="row">
-					<div class="input-field col s6" >
-						<input class="validate" type="text" name="firstname" />
-						<label for="Name" >Voornaam</label>
-					</div>
-					<div class="input-field col s6" >
-						<input class="validate" type="text" name="lastname"  />
-						<label for="SecondName" >Achternaam</label>
-					</div>
-        </div>
-					<br/>
-          <div class="row">
-            <div class="input-field col s3" >
-  						<input class="validate" type="number" name="aantal" min="1" max="30" />
-  						<label for="Email" >Aantal tickets</label>
-  					</div>
-					<div class="input-field col s9" >
-						<input class="validate" type="email" name="email"  />
-						<label for="Email" >Email</label>
-					</div>
-        </div>
-      <br/>
-        <div class="row">
-          <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea" type="text"></textarea>
-          <label for="textarea1">Eventuele opmerkingen</label>
-        </div>
+         100% {
+            opacity: 1;
+            transform: translateX(0%);
+         }
+      }
+      @-webkit-keyframes slide {
+         0% {
+            opacity: 0;
+            -webkit-transform: translateX(70%);
+         }
+         100% {
+            opacity: 1;
+            -webkit-transform: translateX(0%);
+         }
+      }
+   </style>
+   <body>
+      <div id="fullpage">
+         <div class="section active first" data-anchor="firstPage">
+            <h1 class="w3-animate-bottom"><mark>Online ticketverkoop SrcOrkest</mark></h1>
+            <br/>
+            <p style="font-size: 30px;color: black;" class="w3-animate-bottom"><a style="color: black;" id="register" href="#secondPage" ><br/>
+               <i class=" fa fa-angle-down " ></i></a>
+            </p>
+         </div>
+         <div class="section second" data-anchor="secondPage" >
+            <div class="tekstje">
+               <h3>Online ticketverkoop SrcOrkest</h3>
+               <p>Vul hieronder het formulier in om tickets te bestellen, wij leggen uw tickets opzij aan de kassa.</p>
+            </div>
+            <form action="/entry/new" method="POST" class="formulier" >
+               <div class="row">
+                  <div class="input-field col s6" >
+                     <input class="validate" type="text" name="Voornaamd" />
+                     <label for="Name" >Voornaam</label>
+                  </div>
+                     <div class="input-field col s6" >
+                        <input class="validate" type="text" name="Achternaam"  />
+                        <label for="SecondName" >Achternaam</label>
+                     </div>
+               </div>
+               <br/>
+               <div class="row">
+                  <div class="input-field col s3" >
+                     <input class="validate" type="number" name="Tickets" min="1" max="30" />
+                     <label for="Email" >Aantal tickets</label>
+                  </div>
+                     <div class="input-field col s9" >
+                        <input class="validate" type="email" name="Email"  />
+                        <label for="Email" >Email</label>
+                     </div>
+               </div>
+               <br/>
+               <div class="row">
+                  <div class="input-field col s12">
+                     <textarea id="textarea1" name="Opmerkingen" class="materialize-textarea" type="text"></textarea>
+                     <label for="textarea1">Eventuele opmerkingen</label>
+                  </div>
+               </div>
+               <form action="#">
+                  <br/>
+                  <br/>
+                  <input type="submit" value="Bestellen" class="submit"/>
+               </form>
+               <p class="footer" style="margin: auto;font-size: 11px; background-color: #BE0000;position: absolute;width: 100%;padding: 10; text-align: right;"><p5>&copy2018 SrcOrkest &nbsp&nbsp-&nbsp&nbsp site by Wouter Van Hoof</p5></p>
+         </div>
       </div>
-          <form action="#">
-					<br/>
-					<br/>
-					<input type="submit" value="Bestellen" class="submit"/>
-				</form>
-					<p class="footer" style="margin: auto;font-size: 11px; background-color: #BE0000;position: absolute;width: 100%;padding: 10; text-align: right;"><p5>&copy2018 SrcOrkest &nbsp&nbsp-&nbsp&nbsp site by Wouter Van Hoof</p5></p>
-			</div>
-		</div>
-		<script>
+      <script>
+      $(window).scroll(function() {
+         $(".slideanim").each(function(){
+            var pos = $(this).offset().top;
 
-			$(window).scroll(function() {
-  $(".slideanim").each(function(){
-    var pos = $(this).offset().top;
-
-    var winTop = $(window).scrollTop();
-    if (pos < winTop + 600) {
-      $(this).addClass("slide");
-    }
-  });
-});
-		</script>
-	</body>
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+               $(this).addClass("slide");
+            }
+         });
+      });
+      </script>
+   </body>
 </html>
